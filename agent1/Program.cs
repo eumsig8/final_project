@@ -16,7 +16,7 @@ class Agent1
 
         if (directoryPath == null)
         {
-            Console.WriteLine("No valid directory provided. Exitinр.");
+            Console.WriteLine("No valid directory provided. Exiting.");
             WaitToExit();
             return;
         }
