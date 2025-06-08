@@ -10,7 +10,6 @@ class Master
     static string pipeName1;
     static string pipeName2;
 
-    // Data structure: filename -> word -> count
     static ConcurrentDictionary<string, ConcurrentDictionary<string, int>> aggregatedData = new();
 
     static void Main(string[] args)
@@ -27,7 +26,6 @@ class Master
             pipeName2 = args[1];
         }
 
-        // Set CPU affinity to core 2 (Master)
         ProcessAffinity.SetAffinity(2);
 
         var thread1 = new Thread(() => ListenPipe(pipeName1));
